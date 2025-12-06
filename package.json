@@ -1,19 +1,25 @@
 {
-  "name": "workspace",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "anime-sama-api",
+  "version": "2.0.0",
+  "description": "API Node.js pour scraper anime-sama.org en temps réel",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "postinstall": "npx playwright install chromium || true"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "el_cid",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "cors": "^2.8.5",
-    "express": "^4.21.2"
-  },
-  "description": "Une API Node.js serverless qui scrape le site anime-sama.fr en temps réel pour fournir des données d'anime via des endpoints JSON. Compatible avec Vercel et prêt pour le déploiement."
+    "express": "^4.21.2",
+    "playwright": "^1.57.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
 }
